@@ -1,0 +1,196 @@
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-main);
+}
+
+#back-btn {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-main);
+    border: 1px solid var(--color-main);
+}
+
+.btn-primary {
+    background-color: var(--color-main);
+    color: var(--color-light);
+}
+
+.btn-danger {
+    background-color: var(--color-error);
+    color: var(--color-light);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-main);
+    color: var(--color-second-bg);
+}
+
+.shadow {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+a:hover {
+    opacity: 0.9;
+}
+
+.color-primary {
+    color: var(--color-main);
+}
+
+.color-success {
+    color: var(--color-success)
+}
+
+.color-danger {
+    color: var(--color-error);
+}
+
+.float-right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-light);
+    color: var(--color-main);
+    font-size: 15px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.border-danger {
+    border: 1px solid var(--color-error)
+}
+
+.v-input-error {
+    border: 1px solid var(--color-error) !important;
+}
+
+.m-1 {
+    margin: 10px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.ms-1 {
+    margin-left: 10px;
+}
+
+.me-1 {
+    margin-right: 10px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* -------------------------- placeholder animation -------------------------------- */
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+
+    100% {
+        background-position: 468px 0
+    }
+}
+
+
+.blog-img-placeholder,
+.blog-title-placeholder,
+.blog-desc-placeholder,
+.blog-desc-placeholder {
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: darkgray;
+    background: linear-gradient(to right, #eeeeee 10%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
+.blog-img-placeholder {
+    height: 200px;
+}
+
+.blog-title-placeholder {
+    height: 10px;
+    width: 150px;
+    margin: 10px 0 0 10px;
+}
+
+.blog-desc-placeholder {
+    height: 10px;
+    margin: 10px 0 0 10px;
+}
+
+.one {
+    width: 90%;
+}
+
+.two {
+    width: 85%;
+}
+
+.three {
+    width: 80%;
+}
