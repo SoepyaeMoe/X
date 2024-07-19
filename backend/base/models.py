@@ -4,7 +4,7 @@ from django.core.validators import FileExtensionValidator
 
 class User(AbstractUser):
     email = models.EmailField(max_length=255, unique=True)
-    username = models.CharField(max_length=255, null=True, blank=True)
+    username = models.CharField(max_length=255, null=True, blank=True, unique=True)
     name = models.CharField(max_length=200, null=True)
     bio = models.TextField(null=True, blank=True)
     image = models.FileField(
@@ -15,7 +15,10 @@ class User(AbstractUser):
     )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username', 'name']
+
+    def __str__(self):
+        return str(self.name)
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -28,6 +31,7 @@ class Blog(models.Model):
     image = models.ImageField(
         null=True, blank=True, 
         upload_to='blogs/', 
+        default='default_blog_image.png',
         validators=[FileExtensionValidator(['png', 'jpg', 'jpeg', 'webp'])]
     )
     title = models.CharField(max_length=255)

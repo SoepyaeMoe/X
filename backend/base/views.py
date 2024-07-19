@@ -82,16 +82,14 @@ def auth_user(request):
 
         if request.data.get('name') == '' and request.data.get('email') == user.email:
             return Response(error_response({'name':'This Fields is required.'}))
-        
-        old_image = ''
 
-        if user.image != 'default_profile.svg' and user.image:
-            old_image = user.image.path
 
         serializers = UserSerializer(instance=user, data=request.data)
         if serializers.is_valid():
-            if os.path.exists(old_image):
-                os.remove(old_image)
+            if user.image != 'default_profile.svg' and user.image:
+                old_image = user.image.path
+                if os.path.exists(old_image):
+                    os.remove(old_image)
             serializers.save() 
     serializers = UserSerializer(user, many=False)
     return Response(success_response(serializers.data))
