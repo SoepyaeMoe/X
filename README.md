@@ -40,6 +40,17 @@ pip install -r requirements.txt
 
 ```
 
+--> Make database migrations :
+```bash
+python manage.py makemigrations
+
+```
+--> Migrate table :
+```bash
+python manage.py migrate
+
+```
+
 #
 
 ### Running the App
@@ -66,6 +77,9 @@ cd X/frontend
 yarn install
 ```
 
+```
+npm install ckeditor5
+```
 ### Compiles and hot-reloads for development
 ```
 yarn serve
