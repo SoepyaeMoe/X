@@ -1,5 +1,4 @@
 <div align="center">
-<img width="30%" src="https://user-images.githubusercontent.com/72341453/134747028-7e2d90cc-a92f-4f66-815e-54a0d50cca54.PNG">
 
 # X backend
 </div>
@@ -98,3 +97,12 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Demo photos
+<img src="./images/pic1.jpeg"/>
+<img src="./images/pic2.jpeg"/>
+<img src="./images/pic3.jpeg"/>
+<img src="./images/pic4.jpeg"/>
+<img src="./images/pic5.jpeg"/>
+<img src="./images/pic6.jpeg"/>
+<img src="./images/pic7.jpeg"/>
